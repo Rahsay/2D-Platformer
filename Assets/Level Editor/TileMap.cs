@@ -14,7 +14,7 @@ public class TileMap : MonoBehaviour
 
     public Sprite[] pTileCornerSprites => _tileCornerSprites;
 
-    private const int AdjacentTileCount = 8;
+    private const int _adjacentTileCount = 8;
 
     private void Awake()
     {
@@ -35,7 +35,7 @@ public class TileMap : MonoBehaviour
 
     private void NotifyAdjacentTiles(bool add, Vector2 tilePos, Block tile)
     {
-        for (int i = 0; i < AdjacentTileCount; ++i)
+        for (int i = 0; i < _adjacentTileCount; ++i)
         {
             var directionEnum = DirectionUtility.GetDirectionEnum(i);
             Block adjacentTile;

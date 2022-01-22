@@ -20,6 +20,11 @@ public class Block : MonoBehaviour
         SetColor(_color);
     }
 
+    public Sprite GetDefaultSprite()
+    {
+        return _spriteRenderer.sprite;
+    }
+
 
     public void SetColor(Color color)
     {
